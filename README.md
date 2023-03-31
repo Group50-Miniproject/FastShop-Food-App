@@ -13,7 +13,7 @@ This idea was brainstormed by us for a "miniproject" course we are undertaking t
 semester.<br>
 
 
-<b> FEATURES </b>
+<h2><b> FEATURES </b></h2>
 <ul>
 <li> Menu </li>
 <li> Login Page </li>
