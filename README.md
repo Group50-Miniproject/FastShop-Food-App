@@ -1,5 +1,6 @@
+#FastShop-Food App
 
-<h2> Documentation </h2>
+<h2> DOCUMENTATION </h2>
 This is an online food application that University 
 of Ghana can use to order meals. The purpose of this application 
 is to reduce the waiting time of making orders for food.
@@ -12,7 +13,7 @@ This idea was brainstormed by us for a "miniproject" course we are undertaking t
 semester.<br>
 
 
-<b> Features </b>
+<b> FEATURES </b>
 <ul>
 <li> Menu </li>
 <li> Login Page </li>
@@ -23,7 +24,7 @@ semester.<br>
 <li> Cart </li>
 </ul>
 
-<h2><b>Technologies</b></h2>
+<h2><b>TECHNOLOGIES</b></h2>
 <ul>
 <li>JAVASCRIPT</li>
 <li>PYTHON(FLASK)</li>
