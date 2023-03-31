@@ -19,7 +19,8 @@ semester.<br>
 <li> Sign Up Page </li>
 <li> Order </li>
 <li> Services </li>
-<li> Delivery Tracking
+<li> Delivery Tracking </li>
+<li> Cart </li>
 </ul>
 
 <h2><b>Technologies</b></h2>
