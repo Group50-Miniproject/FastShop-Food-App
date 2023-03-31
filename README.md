@@ -1,4 +1,4 @@
-#FastShop-Food App
+<h1> FastShop-Food App </h1>
 
 <h2> DOCUMENTATION </h2>
 This is an online food application that University 
