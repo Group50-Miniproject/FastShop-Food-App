@@ -44,6 +44,6 @@ semester.<br>
 <img src="Assets/Screenshot from 2023-03-31 06-10-55.png" alt="preview">
 <img src="Assets/Screenshot from 2023-03-31 06-11-04.png" alt="preview">
 <img src="Assets/Screenshot from 2023-03-31 06-13-30.png" alt="preview">
-
+<img src="Assets/Screenshot from 2023-03-31 06-59-31.png" alt="preview">
 This application is has both the frontend,backend and a database. <br>
 <i>Deployed on </i> :
