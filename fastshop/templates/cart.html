@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Cart</title>
+	<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/style-cart.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+</head>
+<body ">
+   <div class="CartContainer">
+   	   <div class="Header">
+   	   	<h3 class="Heading">Your Cart</h3>
+   	   	<a href="{{ url_for('menu_page') }}" class = "back"><h5 class="Action">Back to Menu <i class='bx bxs-food-menu'></i></h5></a>
+   	   </div>
+
+	   {% for selected_item in selected_items %}
+   	   <div class="Cart-Items">
+         
+   	   	  <div class="image-box">
+   	   	    <img src="{{ url_for('static', filename = 'styles/img/'+selected_item.source) }}" alt="" class="menu__img">
+   	   	  </div>
+
+   	   	  <div class="about">
+            <h1 class="title"> {{ selected_item.name }}</h1>
+   	   	  	<h3 class="subtitle"> {{ selected_item.description }} </h3>
+   	   	  </div>
+
+   	   	  <div class="counter">
+   	   	  	<div class="btn">+</div>
+   	   	  	<div class="count">1</div>
+   	   	  	<div class="btn">-</div>
+   	   	  </div>
+
+   	   	  <div class="prices">
+   	   	  	<div class="amount">₵ {{ selected_item.price }}</div>
+   	   	  	<div class="remove"><i class='bx bxs-trash-alt'></i></div> 
+   	   	  </div>
+        
+   	   </div>
+	   {% endfor %}
+
+   	 	<!-- <hr> -->
+		<div class="checkout">
+			<div class="total">
+				<div>
+					<div class="Subtotal">Sub-Total</div>
+					<div class="items"> X items</div>
+				</div>
+				<div class="total-amount">₵ {{ selected_items | sum(attribute='price') }}</div>
+			</div>
+			<form method = 'POST'>
+				{{ order_form.hidden_tag() }}
+				{% for selected_item in selected_items %}
+				<input id="ordered_item" name="ordered_item" type="hidden" value="{{ selected_item.name }}">
+				{% endfor %}
+				{{ order_form.submit(class = 'button') }}
+			</form>
+		</div>
+		
+		
+
+ 	</div>
+</body>
+</html>

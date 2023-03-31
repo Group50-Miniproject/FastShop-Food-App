@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/style-login.css') }}">
+    <title>Delivery Food Track</title>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+     {% if messages %}
+       <ul class=flashes>
+       {% for category, message in messages %}
+         <li class="{{ category }}">{{ message }}</li>
+       {% endfor %}
+       </ul>
+     {% endif %}
+    {% endwith %}
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+
+          <form method = "POST" action="#" class="sign-in-form">
+            {{ orderid.hidden_tag() }}
+            <h2 class="title">Delivery Tracking</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <!-- <input type="text" placeholder="Order ID" /> -->
+              {{ orderid.orderid(placeholder = "Order ID")}}
+            </div>
+
+            <!-- <input type="submit" value="Track" class="btn solid" /> -->
+            {{ orderid.submit(class = 'btn solid') }}
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Check your Orders history</h3>
+           <p></p>
+            <button class="btn transparent" id="sign-up-btn">
+              My Orders
+            </button>
+       
+    
+      </div>
+    </div>
+
+    <script src="static/styles/js/login.js"></script>
+  </body>
+</html>

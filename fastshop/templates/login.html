@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/style-login.css') }}">
+
+    <title>Sign In</title>
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+
+          <form method = "POST" action="{{ url_for('login_page') }}" class="sign-in-form">
+            {{ forml.hidden_tag() }}
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              {{ forml.username(placeholder = "Username") }}
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              {{ forml.password(placeholder = "Password") }}
+            </div>
+
+            <div class='f-password'>
+                <h4 class="forgot-password"><a href="{{ url_for('forgot') }}" class="fp-link">Forgot Password?</a></h4>
+            </div>
+         
+            {{ forml.submit(class = 'btn solid') }}
+
+           
+          </form>
+
+          <!-- REGISTRATION FORM -->
+          <form method = "POST" action="{{ url_for('register_page') }}" class="sign-up-form">
+            {{ form.hidden_tag() }}
+            <h2 class="title">Sign up</h2>
+
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              {{ form.username(placeholder = "Username") }}
+            </div>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              {{ form.fullname(placeholder = "Full Name") }}
+            </div>
+            <div class="input-field">
+              <i class="fas fa-map-marker-alt"></i>
+              {{ form.address(placeholder = "Address") }}
+            </div>
+            <div class="input-field">
+              <i class="fas fa-mobile-alt"></i>
+              <!-- <input type="email" placeholder="Email" /> -->
+              {{ form.phone_number(placeholder = 'Phone Number') }}
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <!-- <input type="password" placeholder="Password" /> -->
+              {{ form.password1(placeholder = 'Password') }}
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <!-- <input type="password" placeholder="Confirm Password" /> -->
+              {{ form.password2(placeholder = 'Confirm Password') }}
+            </div>
+            <!-- <input type="submit" class="btn" value="Sign up" /> -->
+            {{ form.submit(class = 'btn') }}
+
+           
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <!-- LOGIN PANEL -->
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>FastShop</h3>
+            <p>
+Register to start using FastShop        </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+        </div>
+
+        <!-- REGISTER PANEL -->
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Already have an account? </h3>
+            <p>
+Login to explore our Vendors            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="static/styles/js/login.js"></script>
+
+  </body>
+</html>
