@@ -32,6 +32,29 @@ semester.<br>
 <li>SQLite </li>
 </ul>
 
+Installation Instructions
+
+Open your terminal
+---
+ You would have to clone this repository and create a virtual environment using this command:
+---
+python -m venv venv
+---
+then activate a virtual environment:
+---
+./venv/bin/activate
+---
+Install the required packages using the command:
+---
+pip install -r requirements.txt
+---
+Now,
+enter command `cd` to the location of the cloned repository and run the command:
+---
+python webapp.py
+---
+Then enter the url `http://127.0.0.1:5000/`  in the address bar of a browser and run it.
+
 <h2> CONTRIBUTORS </h2>
 <ul>
 <li> Douglas Hutchful </li>
