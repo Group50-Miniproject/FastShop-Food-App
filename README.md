@@ -25,10 +25,9 @@ semester.<br>
 <h2><b>Technologies</b></h2>
 <ul>
 <li>JAVASCRIPT</li>
-<li>PYTHON</li>
-<li>FLASK</li>
+<li>PYTHON(FLASK)</li>
 <li>CSS</li>
-<li> SQLite </li>
+<li>SQLite </li>
 </ul>
 
 <h2> CONTRIBUTORS </h2>
@@ -42,6 +41,7 @@ semester.<br>
 <img src="Assets/Screenshot from 2023-03-31 06-10-40.png" alt="preview">
 <img src="Assets/Screenshot from 2023-03-31 06-10-55.png" alt="preview">
 <img src="Assets/Screenshot from 2023-03-31 06-11-04.png" alt="preview">
+<img src="Assets/Screenshot from 2023-03-31 06-13-30.png" alt="preview">
 
 This application is has both the frontend,backend and a database. <br>
 <i>Deployed on </i> :
